@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
-    @rooms = Room.where(:public => 1)
+    @rooms = Room.where(:public => true)
     @new_room = Room.new
   end
   
