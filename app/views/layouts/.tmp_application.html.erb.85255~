@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VideoParty</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<div id="header">
+		<h1>Video Party</h1>
+		<h3>[Start or join a video party, invite your friends but most of all have fun!]</h3>
+	</div>
+	<div id="content">
+		<%= yield %>
+	</div>
+	<div id="footer">
+		&copy; 2011, Melih Onvural - Distributed under MIT License
+	</div>
+</body>
+</html>

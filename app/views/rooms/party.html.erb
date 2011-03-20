@@ -1,0 +1,22 @@
+<div id="invitation">Invite your friends! Share the url of this page http://localhost:300/party/<%= @room.id %></div>
+<div id="videobox">
+	
+</div>
+<script src="http://staging.tokbox.com/v0.91/js/TB.min.js" ></script>
+<script type="text/javascript">
+	var apiKey = 366872; 
+	var sessionId = "<%= @room.sessionId %>"; 
+	var token = "<%= @tok_token %>"; 
+
+	var session;
+
+	TB.addEventListener('exception', exceptionHandler);
+	session = TB.initSession(sessionId);
+
+	//Video chat event listeners
+	session.addEventListener('sessionConnected', sessionConnectedHandler);
+	session.addEventListener('streamCreated', streamCreatedHandler);
+    session.addEventListener('streamDestroyed', streamDestroyedHandler);
+
+	session.connect(apiKey, token);
+</script>

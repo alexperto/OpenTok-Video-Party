@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_id: 
+  name: 
+  sessionId: 
+  public: false
+
+two:
+  room_id: 
+  name: 
+  sessionId: 
+  public: false
