@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
-    @rooms = Room.where(:public => true).order("created_at DESC").limit(25)
+    @rooms = Room.where(:public => true).order("created_at DESC").limit(10)
     @new_room = Room.new
   end
   
