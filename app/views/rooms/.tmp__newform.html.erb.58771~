@@ -1,6 +1,0 @@
-<% form_for(@new_room) do |f| %>
-	Party Name: <%= f.text_field :name %>
-	Public? <%= f.check_box :public %>
-	
-	<%= f.submit %>
-<% end %>
