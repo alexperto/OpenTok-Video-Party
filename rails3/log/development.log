@@ -1,0 +1,2290 @@
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (264.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (273.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateRooms (20110319004405)
+  [1m[35mSQL (0.5ms)[0m  CREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `room_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sessionId` varchar(255), `public` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Incorrect table definition; there can be only one auto column and it must be defined as a key: CREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `room_id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sessionId` varchar(255), `public` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateRooms (20110319004405)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateRooms (20110319004405)
+  [1m[35mSQL (62.4ms)[0m  CREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `room_id` int(11), `name` varchar(255), `sessionId` varchar(255), `public` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110319004405')
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.6ms)[0m  describe `rooms`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW KEYS FROM `rooms`[0m
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateRooms (20110319004405)
+  [1m[35mSQL (1.4ms)[0m  DROP TABLE `rooms`
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20110319004405'[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateRooms (20110319004405)
+  [1m[35mSQL (81.5ms)[0m  CREATE TABLE `rooms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `sessionId` varchar(255), `public` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.1ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110319004405')
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.5ms)[0m  describe `rooms`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `rooms`[0m
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:05:53 -0700 2011
+  Processing by RoomsController#mainpage as HTML
+Completed   in 13ms
+
+ActionView::MissingTemplate (Missing template rooms/mainpage with {:formats=>[:html], :handlers=>[:rhtml, :rxml, :erb, :builder, :rjs], :locale=>[:en, :en]} in view paths "/Users/monvural/Projects/Ruby/VideoParty/app/views"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:07:36 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:23:21 -0700 2011
+  Processing by RoomsController#index as HTML
+Completed   in 2ms
+
+NameError (uninitialized constant RoomsController::Rooms):
+  app/controllers/rooms_controller.rb:4:in `index'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (59.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:23:43 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mRoom Load (14.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (50.0ms)
+Completed   in 142ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182698280_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182698280_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:24:02 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 66ms (Views: 56.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:24:50 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.4ms)
+Completed   in 20ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff(room.created_at) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183159180_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183159180_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:25:14 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 24ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:26:45 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.8ms)
+Completed   in 21ms
+
+ActionView::Template::Error (undefined method `DateTime' for #<Room:0x10443fb20>):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff(room.created_at) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183277460_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183277460_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 18:27:10 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 22ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:28:43 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 93ms (Views: 85.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:29:11 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (6.3ms)
+Completed   in 19ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff(room.created_at) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/views/rooms/index.html.erb:10:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182954360_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182954360_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:29:26 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (1.1ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 22ms (Views: 13.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:30:13 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (677.6ms)
+Completed   in 935ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183241040_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183241040_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:30:56 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.4ms)
+Completed   in 20ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182188200_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182188200_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:32:57 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 78ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:11 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.7ms)
+Completed   in 21ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182845880_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182845880_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:32 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (7.0ms)
+Completed   in 20ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2181914460_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2181914460_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (62.4ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:33 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.5ms)
+Completed   in 246ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183265820_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183265820_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:44 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:50 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.7ms)
+Completed   in 77ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183601480_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183601480_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:34:54 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.6ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (12.0ms)
+Completed   in 36ms
+
+ActionView::Template::Error (undefined local variable or method `elapsed' for #<Room:0x10429ed20>):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:8:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182423600_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182423600_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:35:01 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.8ms)
+Completed   in 22ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2181575720_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2181575720_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:36:12 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (6.3ms)
+Completed   in 19ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183327140_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183327140_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:39:29 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.8ms)
+Completed   in 20ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182241400_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182241400_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:39:35 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.8ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.5ms)
+Completed   in 30ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2181417440_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2181417440_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (72.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (83.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:40:03 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.3ms)
+Completed   in 20ms
+
+ActionView::Template::Error (can't dup NilClass):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2183107920_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2183107920_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:40:32 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 21ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:40:52 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.7ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 22ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:42:14 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (6.6ms)
+Completed   in 20ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:6:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182595700_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182595700_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:42:35 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.5ms)
+Completed   in 21ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= room.start_diff %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/models/room.rb:7:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2181710260_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2181710260_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:48:57 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (7.0ms)
+Completed   in 21ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= start_diff(room.created_at) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/helpers/rooms_helper.rb:5:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182902740_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182902740_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:49:15 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (6.4ms)
+Completed   in 20ms
+
+ActionView::Template::Error ($_ value need to be String (nil given)):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= start_diff(DateTime.parse(room.created_at)) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2181989380_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2181989380_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:49:39 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 82ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:50:51 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 24ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 20:51:10 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (6.4ms)
+Completed   in 21ms
+
+ActionView::Template::Error (expected numeric or date):
+    7: <% @rooms.each do |room| %>
+    8:   <tr>
+    9:     <td><%= room.name %></td>
+    10:     <td><%= start_diff(room.created_at.to_time) %></td>
+    11:   </tr>
+    12: <% end %>
+    13: </table>
+  app/helpers/rooms_helper.rb:5:in `start_diff'
+  app/views/rooms/index.html.erb:10:in `_app_views_rooms_index_html_erb__1710875348_2182089180_0'
+  app/views/rooms/index.html.erb:7:in `_app_views_rooms_index_html_erb__1710875348_2182089180_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:14:40 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:14:51 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/_new.html.erb (0.7ms)
+Rendered rooms/index.html.erb within layouts/application (2.9ms)
+Completed   in 17ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <% form_for(@person) do |f| %>
+    2: 	<%= f.text_field :name %>
+    3: 	<%= f.check_box_tag :public %>
+    4: <% end %>
+  app/views/rooms/_new.html.erb:1:in `_app_views_rooms__new_html_erb___481410077_2181764980_67230'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2181776160_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (62.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (68.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:15:49 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/_new.html.erb (12.1ms)
+Rendered rooms/index.html.erb within layouts/application (14.1ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined method `check_box_tag' for #<ActionView::Helpers::FormBuilder:0x1043aa958>):
+    1: <% form_for(@new_room) do |f| %>
+    2: 	<%= f.text_field :name %>
+    3: 	<%= f.check_box_tag :public %>
+    4: <% end %>
+  app/views/rooms/_new.html.erb:3:in `_app_views_rooms__new_html_erb___481410077_2183094620_67230'
+  app/views/rooms/_new.html.erb:1:in `_app_views_rooms__new_html_erb___481410077_2183094620_67230'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2183105800_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:16:29 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2181954960_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.0ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:16:48 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2183237780_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.6ms)
+  [1m[35mRoom Load (2.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 29ms (Views: 16.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:17:22 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2182379980_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (70.5ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 92ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:17:39 -0700 2011
+
+AbstractController::ActionNotFound (The action 'create' could not be found for RoomsController):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:17:51 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2182642220_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 26ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:17:53 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 0ms
+
+NoMethodError (undefined method `create_session' for nil:NilClass):
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:28:09 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2181616240_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 25ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:28:15 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 3ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at Fri Mar 18 21:30:36 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2182906520_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (6.0ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 29ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:30:39 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2182172440_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.4ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 26ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:30:51 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 2ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:33:00 -0700 2011
+
+LoadError (no such file to load -- lib/opentok):
+  app/controllers/rooms_controller.rb:1
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:33:08 -0700 2011
+
+LoadError (no such file to load -- opentok):
+  app/controllers/rooms_controller.rb:1
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:35:23 -0700 2011
+
+LoadError (no such file to load -- OpenTok/OpenTokSDK):
+  app/controllers/rooms_controller.rb:1
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:37:19 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 3ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:38:45 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 64ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:46:32 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+Completed   in 3ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:46:35 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2181844740_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (5.8ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 75ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:46:42 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+Completed   in 2ms
+
+NameError (uninitialized constant RoomsController::OpenTok):
+  app/controllers/rooms_controller.rb:28:in `config_opentok'
+  app/controllers/rooms_controller.rb:9:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:47:40 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__new_html_erb___481410077_2182943620_67230 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_new.html.erb:1)
+Rendered rooms/_new.html.erb (9.1ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 134ms (Views: 27.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:47:46 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+Completed   in 630ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/rooms_controller.rb:14:in `create'
+  app/controllers/rooms_controller.rb:13:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:48:22 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+Completed   in 699ms
+
+NoMethodError (undefined method `sessionId' for #<OpenTok::OpenTokSession:0x10445cf18>):
+  app/controllers/rooms_controller.rb:11:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:49:38 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+Completed   in 656ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/rooms_controller.rb:14:in `create'
+  app/controllers/rooms_controller.rb:13:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:49:59 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `rooms`
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 04:50:00', NULL, NULL, NULL, '2011-03-19 04:50:00')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/rooms/new
+Completed 302 Found in 653ms
+
+
+Started GET "/rooms/new" for 127.0.0.1 at Fri Mar 18 21:50:00 -0700 2011
+
+AbstractController::ActionNotFound (The action 'new' could not be found for RoomsController):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/rooms/new" for 127.0.0.1 at Fri Mar 18 21:54:55 -0700 2011
+  Processing by RoomsController#new as HTML
+Completed   in 37ms
+
+ActionView::MissingTemplate (Missing template rooms/new with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :erb, :builder]} in view paths "/Users/monvural/Projects/Ruby/VideoParty/app/views", "/Users/monvural/Projects/Ruby/VideoParty/vendor/plugins/opentok/app/views"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/rooms/new" for 127.0.0.1 at Fri Mar 18 21:57:03 -0700 2011
+  Processing by RoomsController#new as HTML
+Rendered rooms/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rooms/" for 127.0.0.1 at Fri Mar 18 21:57:18 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181497660_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 88ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 21:57:20 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183574780_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 85ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 21:57:27 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 04:57:28', NULL, NULL, NULL, '2011-03-19 04:57:28')
+  [1m[36mSQL (35.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rooms/new
+Completed 302 Found in 651ms
+
+
+Started GET "/rooms/new" for 127.0.0.1 at Fri Mar 18 21:57:28 -0700 2011
+  Processing by RoomsController#new as HTML
+Rendered rooms/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:01:01 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181616060_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 28ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:01:07 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:01:08', 'First Party', 1, '29f19b94ff91c37d07a742e03c5bb60492cfa2a5', '2011-03-19 05:01:08')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/rooms/new
+Completed 302 Found in 648ms
+
+
+Started GET "/rooms/new" for 127.0.0.1 at Fri Mar 18 22:01:08 -0700 2011
+  Processing by RoomsController#new as HTML
+Rendered rooms/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:09:31 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181663320_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 70ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:09:45 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 2", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:09:45', 'Party 2', 1, '2f964aa872cb44cc85131d6998569401a61d6d6e', '2011-03-19 05:09:45')
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/party/{id}
+Completed 302 Found in 668ms
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:09:45 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 2", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:09:46', 'Party 2', 1, '2036958a5dd0bff4cdd0bb0d402646ec5b9ee021', '2011-03-19 05:09:46')[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/party/{id}
+Completed 302 Found in 636ms
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:09:46 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 2", "public"=>"1"}}
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:09:47', 'Party 2', 1, '22654381197c66b5553bf4759675e1c9ff93f834', '2011-03-19 05:09:47')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/party/{id}
+Completed 302 Found in 776ms
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:09:47 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 2", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:09:47', 'Party 2', 1, '24a9abb8645eb068c8a53e5af4a720adf70d7423', '2011-03-19 05:09:47')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/party/{id}
+Completed 302 Found in 683ms
+
+
+Started GET "/rooms" for 127.0.0.1 at Fri Mar 18 22:11:15 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183493280_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.2ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 28ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:11:27 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:11:27', 'Party 3', 1, '27c515d7a040aed802d090077ac5cb3ae1934fd2', '2011-03-19 05:11:27')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Completed   in 659ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party_room"}):
+  app/controllers/rooms_controller.rb:21:in `create'
+  app/controllers/rooms_controller.rb:19:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:12:16 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:12:17', 'Party 3', 1, '29e972944e356774e5737d085132dd82109daba4', '2011-03-19 05:12:17')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Completed   in 633ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party"}):
+  app/controllers/rooms_controller.rb:21:in `create'
+  app/controllers/rooms_controller.rb:19:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:12:35 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:12:36', 'Party 3', 1, '2c59d51db147a040b13dbe22fae18dbf5c158d94', '2011-03-19 05:12:36')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Completed   in 645ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party"}):
+  app/controllers/rooms_controller.rb:21:in `create'
+  app/controllers/rooms_controller.rb:19:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:15:17 -0700 2011
+
+ArgumentError (missing :controller):
+  config/routes.rb:6
+  config/routes.rb:1
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:15:37 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:15:38', 'Party 3', 1, '27455400be6f00efba730f6da45588ade5272f31', '2011-03-19 05:15:38')
+  [1m[36mSQL (28.0ms)[0m  [1mCOMMIT[0m
+Completed   in 655ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:16:26 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:16:27', 'Party 3', 1, '224f793f00e7ad3b1ae7db7991594e2e3b50ad6f', '2011-03-19 05:16:27')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Completed   in 621ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:16:42 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:16:43', 'Party 3', 1, '211c401895871e9d5cb14a600f9cb524bc462f16', '2011-03-19 05:16:43')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Completed   in 654ms
+
+ActionController::RoutingError (No route matches {:controller=>"room", :action=>"party"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:17:35 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:17:36', 'Party 3', 1, '218bb62ca4bff19ff189e772b05702c71deac12e', '2011-03-19 05:17:36')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Completed   in 685ms
+
+NameError (undefined local variable or method `show_room_url' for #<RoomsController:0x103ea7bb8>):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:17:54 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:17:55', 'Party 3', 1, '2d4f58fe46e56e574446e31fc4f6abe65bf4512f', '2011-03-19 05:17:55')
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Completed   in 602ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"destroy"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:18:15 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Party 3", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:18:16', 'Party 3', 1, '2ba1e4396b0c4607787b262f3b52ed0fd279640f', '2011-03-19 05:18:16')[0m
+  [1m[35mSQL (1.2ms)[0m  COMMIT
+Completed   in 633ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"destroy"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:18:36 -0700 2011
+
+ActionController::RoutingError (No route matches "/rooms"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:18:40 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/_newform.html.erb (4.9ms)
+Rendered rooms/index.html.erb within layouts/application (7.1ms)
+Completed   in 24ms
+
+ActionView::Template::Error (No route matches {:controller=>"rooms", :action=>"create"}):
+    1: <% form_for(@new_room) do |f| %>
+    2: 	Party Name: <%= f.text_field :name %>
+    3: 	Public? <%= f.check_box :public %>
+    4: 	
+  app/views/rooms/_newform.html.erb:1:in `_app_views_rooms__newform_html_erb___1524430917_2183232540_2049630'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2183252700_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:18:46 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181501320_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.9ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:18:54 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183297440_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 28ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:19:06 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:19:07', 'first party', 1, '22dd7ff0137dcc2c2ea53a99e4dcd8bfa3df434a', '2011-03-19 05:19:07')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Completed   in 633ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"destroy"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:21:51 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"first party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:21:51', 'first party', 1, '27dcbe01f66fc71ceff5cbb338951900db7b90d1', '2011-03-19 05:21:51')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+Completed   in 705ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"show"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:22:26 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182395980_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.5ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 34ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:22:35 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/_newform.html.erb (4.4ms)
+Rendered rooms/index.html.erb within layouts/application (6.3ms)
+Completed   in 23ms
+
+ActionView::Template::Error (No route matches {:controller=>"rooms", :action=>"create"}):
+    1: <% form_for(@new_room) do |f| %>
+    2: 	Party Name: <%= f.text_field :name %>
+    3: 	Public? <%= f.check_box :public %>
+    4: 	
+  app/views/rooms/_newform.html.erb:1:in `_app_views_rooms__newform_html_erb___1524430917_2181684300_2049630'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2181702600_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:23:02 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/_newform.html.erb (4.3ms)
+Rendered rooms/index.html.erb within layouts/application (6.2ms)
+Completed   in 85ms
+
+ActionView::Template::Error (No route matches {:controller=>"rooms", :action=>"create"}):
+    1: <% form_for(@new_room) do |f| %>
+    2: 	Party Name: <%= f.text_field :name %>
+    3: 	Public? <%= f.check_box :public %>
+    4: 	
+  app/views/rooms/_newform.html.erb:1:in `_app_views_rooms__newform_html_erb___1524430917_2183645720_2049630'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2180485840_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  [1m[35mRoom Load (0.2ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:23:04 -0700 2011
+  Processing by RoomsController#index as HTML
+Rendered rooms/_newform.html.erb (4.1ms)
+Rendered rooms/index.html.erb within layouts/application (6.0ms)
+Completed   in 23ms
+
+ActionView::Template::Error (No route matches {:controller=>"rooms", :action=>"create"}):
+    1: <% form_for(@new_room) do |f| %>
+    2: 	Party Name: <%= f.text_field :name %>
+    3: 	Public? <%= f.check_box :public %>
+    4: 	
+  app/views/rooms/_newform.html.erb:1:in `_app_views_rooms__newform_html_erb___1524430917_2182172180_2049630'
+  app/views/rooms/index.html.erb:2:in `_app_views_rooms_index_html_erb__1710875348_2182189820_0'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:23:13 -0700 2011
+
+SyntaxError (/Users/monvural/Projects/Ruby/VideoParty/config/routes.rb:4: syntax error, unexpected tIDENTIFIER, expecting kEND):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:24:00 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183636060_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 88ms (Views: 77.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:24:05 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"second party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:24:05', 'second party', 1, '21d007bcbad6161659fdf03f7af2fab64dd63cd8', '2011-03-19 05:24:05')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://www.onvural.net
+Completed 302 Found in 638ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:24:38 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181981960_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:24:43 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"third party", "public"=>"1"}}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:24:44', 'third party', 1, '2af55b45aad20167ff3be2f0488fee01f35bae52', '2011-03-19 05:24:44')
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Completed   in 764ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/rooms_controller.rb:17:in `+'
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:24:56 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"third party", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:24:56', 'third party', 1, '29ea1f27fa4a45151db0d19623ecd1576316bfa1', '2011-03-19 05:24:56')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/rooms/22
+Completed 302 Found in 641ms
+
+
+Started GET "/rooms/22" for 127.0.0.1 at Fri Mar 18 22:24:57 -0700 2011
+  Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"22"}
+Completed   in 0ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:26:49 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2180697540_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.2ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 89ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:26:58 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"fourth party", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:26:59', 'fourth party', 1, '2b2525c5713bbc030f702c47194f7ee2a730b5f9', '2011-03-19 05:26:59')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Completed   in 614ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"show"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:28:59 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"fourth party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:29:00', 'fourth party', 1, '2760c9309f9f0e853583201c73818fa2e938b62a', '2011-03-19 05:29:00')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+Completed   in 644ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"show"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:47:53 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"fourth party", "public"=>"1"}}
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:47:54', 'fourth party', 1, '2a8890ef612ff4d2ea9459354b01b3d246cdd491', '2011-03-19 05:47:54')[0m
+  [1m[35mSQL (21.8ms)[0m  COMMIT
+Completed   in 565ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"show"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:52:13 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182713580_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:52:19 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"fifth party", "public"=>"1"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:52:20', 'fifth party', 1, '262906cff01980a89cc95b7c8a9835e19fc0cbeb', '2011-03-19 05:52:20')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+Completed   in 552ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"show"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:52:38 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"fifth party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:52:38', 'fifth party', 1, '2b2f3ca8745bd814ebd116c1908c1ebbb8e2bde0', '2011-03-19 05:52:38')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Completed   in 534ms
+
+ActionController::RoutingError (No route matches {:controller=>"rooms", :action=>"party"}):
+  app/controllers/rooms_controller.rb:17:in `create'
+  app/controllers/rooms_controller.rb:15:in `create'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/party/22" for 127.0.0.1 at Fri Mar 18 22:52:53 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"22"}
+Completed   in 0ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.5ms)
+
+
+Started GET "/party/22" for 127.0.0.1 at Fri Mar 18 22:53:04 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"22"}
+Completed   in 13ms
+
+ActionView::MissingTemplate (Missing template rooms/party with {:formats=>[:html], :locale=>[:en, :en], :handlers=>[:rjs, :rhtml, :rxml, :erb, :builder]} in view paths "/Users/monvural/Projects/Ruby/VideoParty/app/views", "/Users/monvural/Projects/Ruby/VideoParty/vendor/plugins/opentok/app/views"):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/party/22" for 127.0.0.1 at Fri Mar 18 22:53:20 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"22"}
+Rendered rooms/party.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 22:53:38 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183126500_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.5ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 26ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Fri Mar 18 22:54:14 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"First Party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-19 05:54:15', 'First Party', 1, '29784785d0c5fa2050da8454223b26836990577b', '2011-03-19 05:54:15')
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/party/28
+Completed 302 Found in 603ms
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:54:15 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+Rendered rooms/party.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:56:46 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 2183501480)
+Completed   in 8ms
+
+NoMethodError (undefined method `sessionId' for []:ActiveRecord::Relation):
+  app/controllers/rooms_controller.rb:29:in `party'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:57:31 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28)[0m
+Completed   in 11ms
+
+NoMethodError (undefined method `sessionId' for #<ActiveRecord::Relation:0x104246cb0>):
+  app/controllers/rooms_controller.rb:29:in `party'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:59:09 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.7ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 2181505840) LIMIT 1
+Completed   in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Room with ID=2181505840):
+  app/controllers/rooms_controller.rb:25:in `party'
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:59:21 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+Completed   in 1ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  
+
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /opt/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 22:59:35 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 23:00:21 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.2ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 23:01:38 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:42:34 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182142080_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.5ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 57ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:43:30 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183226460_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.9ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:45:10 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182195820_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.0ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 27ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:45:20 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183241540_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (7.9ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:46:26 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182205540_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 27ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:46:51 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183264080_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.5ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:47:06 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182230180_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.3ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:47:12 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183309620_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 34ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:47:42 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182193820_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 30ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:47:58 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183330160_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (10.2ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 38ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:07 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182276900_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 34ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:13 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183343740_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (9.0ms)
+  [1m[36mRoom Load (0.7ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 59ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:17 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182247900_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (17.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 46ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:29 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183426700_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (7.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 35ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:33 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182359000_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (6.8ms)
+  [1m[35mRoom Load (0.5ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 31ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:48:39 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183489980_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:1)
+Rendered rooms/_newform.html.erb (9.1ms)
+  [1m[36mRoom Load (1.1ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 37ms (Views: 21.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:49:15 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182376760_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (9.1ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:49:32 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183497280_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (6.9ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 34ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:49:43 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182408820_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (6.0ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 32ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:50:46 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183516940_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 28ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:51:30 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182399120_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Fri Mar 18 23:57:08 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 108ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:57:14 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182655800_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:59:08 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182088180_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 28ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:59:37 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183571120_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.8ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 86ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:59:43 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182450820_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 28ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Mar 18 23:59:57 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183562600_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (7.1ms)
+  [1m[35mRoom Load (0.7ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 131ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:00:06 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182419620_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (7.9ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:00:07 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183567460_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (9.8ms)
+  [1m[35mRoom Load (1.0ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 106ms (Views: 24.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:00:13 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182419160_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.8ms)
+  [1m[36mRoom Load (0.7ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 30ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:00:35 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183559080_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (10.2ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 109ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:01:03 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182399540_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.7ms)
+  [1m[36mRoom Load (1.0ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 37ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:01:29 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183517500_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[35mRoom Load (214.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (225.7ms)
+Completed 200 OK in 298ms (Views: 17.8ms | ActiveRecord: 214.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:02:07 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182384020_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.3ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 247ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 00:25:46 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 97ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 00:26:34 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182567720_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.8ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 30ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 00:26:42 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 00:27:48 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 00:28:48 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.5ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 10:06:36 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182999760_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (10.3ms)
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 136ms (Views: 99.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:08:19 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 124ms (Views: 79.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:08:46 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (1.1ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 141ms (Views: 113.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:20:04 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:39:16 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 80ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:40:53 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.5ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:41:50 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.5ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:42:35 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (3.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 40ms (Views: 9.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:42:49 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:43:29 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mRoom Load (0.5ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/party/28" for 127.0.0.1 at Sat Mar 19 11:43:41 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRoom Load (0.6ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 28) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 32ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 17:48:31 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183024680_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.7ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 68ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 17:48:48 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182070440_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)[0m
+Rendered rooms/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Mar 19 17:49:34 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183114720_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1)
+Rendered rooms/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 20 00:16:19 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182081980_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (956.8ms)
+  [1m[36mRoom Load (12.7ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at ASC[0m
+Rendered rooms/index.html.erb within layouts/application (1916.9ms)
+Completed 200 OK in 7736ms (Views: 3436.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 20 00:17:07 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181500820_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (11983.5ms)
+  [1m[35mRoom Load (43.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at ASC
+Rendered rooms/index.html.erb within layouts/application (12042.0ms)
+Completed 200 OK in 12444ms (Views: 12084.0ms | ActiveRecord: 43.3ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Sun Mar 20 00:18:55 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"a8QVbVw30SKn3dbLXtfdjPwxILgC2NSjS2Ui4IsnvYc=", "utf8"=>"✓", "room"=>{"name"=>"Second Party", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (227.0ms)[0m  INSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-03-20 07:18:56', 'Second Party', 1, '2cf6eab259931f40fefd776ea8ef9c1f64cbadde', '2011-03-20 07:18:56')
+  [1m[36mSQL (78.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/party/29
+Completed 302 Found in 1322ms
+
+
+Started GET "/party/29" for 127.0.0.1 at Sun Mar 20 00:18:56 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mRoom Load (26.8ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 29) LIMIT 1
+Rendered rooms/party.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 123ms (Views: 64.6ms | ActiveRecord: 332.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 20 00:19:47 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183251160_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (7.9ms)
+  [1m[36mRoom Load (21.2ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at ASC[0m
+Rendered rooms/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 62ms (Views: 25.1ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Mar 20 00:19:58 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182421940_2049630 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.4ms)
+  [1m[35mRoom Load (0.3ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC
+Rendered rooms/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Apr 10 11:50:30 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mSQL (54.5ms)[0m  [1mSHOW TABLES[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182819540_2024990 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (85.7ms)
+  [1m[35mRoom Load (0.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC LIMIT 25
+Rendered rooms/index.html.erb within layouts/application (171.4ms)
+Completed 200 OK in 357ms (Views: 178.4ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Apr 10 11:53:16 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2181792180_2024990 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[36mRoom Load (0.4ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC LIMIT 1[0m
+Rendered rooms/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 29ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun Apr 10 11:54:13 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182906700_2024990 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (5.6ms)
+  [1m[35mRoom Load (0.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC LIMIT 10
+Rendered rooms/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Apr 14 22:42:29 -0700 2011
+  Processing by RoomsController#index as HTML
+  [1m[36mSQL (43.3ms)[0m  [1mSHOW TABLES[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2182819440_2024990 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (72.3ms)
+  [1m[35mRoom Load (11.6ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC LIMIT 10
+Rendered rooms/index.html.erb within layouts/application (168.7ms)
+Completed 200 OK in 477ms (Views: 221.6ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/party/29" for 127.0.0.1 at Thu Apr 14 22:42:34 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 29) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Apr 14 22:42:36 -0700 2011
+  Processing by RoomsController#index as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_rooms__newform_html_erb___1524430917_2183371680_2024990 at /Users/monvural/Projects/Ruby/VideoParty/app/views/rooms/_newform.html.erb:3)
+Rendered rooms/_newform.html.erb (6.0ms)
+  [1m[35mRoom Load (0.4ms)[0m  SELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`public` = 1) ORDER BY created_at DESC LIMIT 10
+Rendered rooms/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 28ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rooms" for 127.0.0.1 at Thu Apr 14 22:42:42 -0700 2011
+  Processing by RoomsController#create as HTML
+  Parameters: {"commit"=>"Create Room", "authenticity_token"=>"AMpNXaUchVfeuW8JyOjaQvjafFEgNdx8wY/LFRLLBrA=", "utf8"=>"✓", "room"=>{"name"=>"On Production", "public"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  describe `rooms`
+  [1m[36mSQL (16.4ms)[0m  [1mINSERT INTO `rooms` (`created_at`, `name`, `public`, `sessionId`, `updated_at`) VALUES ('2011-04-15 05:42:43', 'On Production', 1, '16c5e2d6391c4552012bff3f02efcc5a6678729c', '2011-04-15 05:42:43')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/party/30
+Completed 302 Found in 786ms
+
+
+Started GET "/party/30" for 127.0.0.1 at Thu Apr 14 22:42:43 -0700 2011
+  Processing by RoomsController#party as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mRoom Load (0.3ms)[0m  [1mSELECT `rooms`.* FROM `rooms` WHERE (`rooms`.`id` = 30) LIMIT 1[0m
+Rendered rooms/party.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 9.8ms | ActiveRecord: 18.7ms)
