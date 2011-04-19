@@ -1,0 +1,1 @@
+CREATE DATABASE room_generator_db;

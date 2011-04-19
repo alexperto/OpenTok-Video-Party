@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on
+RewriteOptions MaxRedirects=10
+
+RewriteRule ^room/new$ index.php?view=add_room
+RewriteRule ^room/([0-9]+)$ index.php?view=individual_room&roomId=$1
